@@ -88,10 +88,10 @@ const LeftBar = () => {
         </div>
         
       {/*  Button Post*/}
-        <Link href={"/"} className={"bg-white text-black rounded-full w-12 h-12 flex items-center justify-center 2xl:hidden"}>
+        <Link href={"/compose/post"} className={"bg-white text-black rounded-full w-12 h-12 flex items-center justify-center 2xl:hidden"}>
             <Image path={"icons/post.svg"} alt={"new post"} w={24} h={24}/>
         </Link>
-        <Link href={"/"} className={"hidden 2xl:block bg-white text-black rounded-full font-bold py-2 px-20"}>
+        <Link href={"/compose/post"} className={"hidden 2xl:block bg-white text-black rounded-full font-bold py-2 px-20"}>
           Post
         </Link>
       </div>

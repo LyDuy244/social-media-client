@@ -21,20 +21,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
-      <div className="max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto flex justify-between">
+      <div className="max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto flex justify-between items-start">
         <div className={"px-2 xsm:px-4 2xl:px-8"}><LeftBar/></div>
         <div className={"lg:min-w-[600px] border-x-[1px]  flex-1 border-borderGray"}>
           {children}
+          {modal}
         </div>
-        <div className={"hidden lg:flex ml-4 md:ml-8 px-2 flex-1"}><RightBar/></div>
+        <div className={"hidden lg:flex ml-4 md:ml-8 px-2"}><RightBar/></div>
       </div>
       </body>
     </html>
